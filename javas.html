@@ -1,0 +1,79 @@
+<html>
+<head></head>
+<body>
+<h1>js document dot write</h1>
+<!--script>
+	document.write("learning is fun")
+</script-->
+
+<!--script>
+	window.alert(2+6);
+</script>
+	<button onclick="window.print">print</button-->
+
+<!--JS variable-->
+<!-- var(old browsers),let(algebra),nothing(modern) >
+<h1>JS Variable</h1>
+<p id = "p1"></p>
+<script>
+	var num1=24;
+	var num2=34;
+	var res =num1+num2;
+	document.getElementById("p1").innerHTML=res;
+</script>
+<p id = "p2"></p>
+<script>
+	let num1=42;
+	let num2=43;
+	var res =num1+num2;
+	document.getElementById("p2").innerHTML=res;
+</script>
+<p id = "p3"></p>
+<script>
+	num1=23;
+	num2=43;
+	var res =num1+num2;
+	document.getElementById("p3").innerHTML=res;
+</script><hr/>
+
+<h2>Assingment</h2>
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="para"></p>
+<script>
+var num1=24;
+	var num2=34;
+	var res =num1+num2;
+	document.getElementById("p1").innerHTML=res;
+
+let subject="java script";
+document.getElementById("p2").innerHTML=subject;
+
+let corp="softura" ,year=2022 ,tech="dotnet";
+document.getElementById("para").innerHTML=corp+" "+year+"is getting trained in" +" "+tech;
+
+</script-->
+
+<!-- Function -->
+<h2>Function</h2>
+<p>Come here-lets see how to Got focus<br/>
+Go Away-lets see how to Lost focus</p>
+< p id = "p1"></p>
+<script>
+setInterval("Fokus()",1);
+function Fokus()
+{
+var str;
+if(document.hasFocus())
+{
+str="Got focus";
+}
+else
+{
+str="Lost focus";
+}
+document.getElementById("p1").innerHTML=str;
+}
+</script>
+</body>
+</html>

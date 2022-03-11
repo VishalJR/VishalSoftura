@@ -1,0 +1,27 @@
+<html>
+<body>
+<!-- Function -->
+<h2>Function</h2>
+<p>Come here-lets see how to Got focus<br/>
+Go Away-lets see how to Lost focus</p>
+
+<p id ="p1"></p>
+
+<script>
+setInterval("Fokus()",);
+function Fokus()
+{
+var str;
+if(document.hasFocus())
+{
+str="Got focus";
+}
+else
+{
+str="Lost focus";
+}
+document.getElementById("p1").innerHTML=str;
+}
+</script>
+</body>
+</html>
