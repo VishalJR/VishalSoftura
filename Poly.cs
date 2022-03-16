@@ -1,28 +1,32 @@
 using System;
-class GM1{
-public void Wealth(){
-Console.WriteLine("Method from GrandMother");
-Console.WriteLine("All my wealth is yours");
-}
-}
-class M1:GM1
+class Polytask
 {
-public virtual void Health(){
+public void validate1()
+{
+Console.WriteLine("Enter Email Id");
+string email=Console.ReadLine();
+Console.WriteLine("Enter password");
+string pass=Console.ReadLine();
+Console.WriteLine("Validation done");
+}
+public void validate1(string mem,long pin)
+{
+Console.WriteLine("Membership Id is:"+mem);
+Console.WriteLine("Pin is:"+pin);
 
-Console.WriteLine("Method from Mother class");
-Console.WriteLine("good healith is my strength");
+Console.WriteLine("validation Done");
 }
+public void validate1(long mob,long pin)
+{
+Console.WriteLine("Mobile Number is:"+mob);
+Console.WriteLine("Pin is:"+pin);
+Console.WriteLine("validation Done");
 }
-class Child:M1{
-public override void Health(){
-Console.WriteLine("I am a fitness Freak");
-}
-}
-class Inherit1{
+
 public static void Main()
 {
-Child cobj= new Child();
-cobj.Health();
-cobj.Wealth();
-}
+Polytask obj=new Polytask();
+obj.validate1();
+obj.validate1("nikshiswe",12345);
+obj.validate1(9382341275,54321);
 }
