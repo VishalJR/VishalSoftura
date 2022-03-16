@@ -27,6 +27,6 @@ public static void Main()
 {
 Polytask obj=new Polytask();
 obj.validate1();
-obj.validate1("nikshiswe",12345);
-obj.validate1(9382341275,54321);
+obj.validate1("MaxStevens",12325);
+obj.validate1(8248030917,54821);
 }
