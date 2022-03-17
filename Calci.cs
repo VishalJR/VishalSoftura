@@ -1,60 +1,32 @@
 using System;
-abstract class Calci
+abstract class calculator
 {
-public abstract void OP();
+public abstract void operations();
 }
-class Add:Calci
+class arith:calculator
 {
-public override void OP()
+public override void operations()
 {
-  int n1=20,n2=2;
-  int res;
-  res=n1+n2;
-Console.WriteLine("Add:",res);
-}
-}
-class Sub:Calci
-{
-public override void OP()
-{
-  int n1=20,n2=2; 
-  int res;
-  res=n1-n2;
-Console.WriteLine("Sub:",res);
+int num1,num2,add,sub,mul,div;
+num1=Convert.ToInt32(Console.ReadLine());
+num2=Convert.ToInt32(Console.ReadLine());
+add=num1+num2;
+sub=num1-num2;
+mul=num1*num2;
+div=num1/num2;
+Console.WriteLine("Add the number:"+add);
+Console.WriteLine("sub the number:"+sub);
+Console.WriteLine("Mul the number:"+mul);
+Console.WriteLine("Mul the number:"+div);
 }
 }
-class Mul:Calci
-{
-public override void OP()
-{
-  int n1=20,n2=2;
-  int res;
-  res=n1*n2;
-Console.WriteLine("Mul:",res);
-}
-}
-class Div:Calci
-{
-public override void OP()
-{
-  int n1=20,n2=2;
-  int res;
-  res=n1/n2;
-Console.WriteLine("Div:",res);
-}
-}
+
 class absImple
 {
 public static void Main()
 {
+arith obj =new arith();
+obj.operations();
 
-Add aobj=new Add();
-aobj.OP();
-Sub sobj=new Sub();
-sobj.OP();
-Mul mobj=new Mul();
-mobj.OP();
-Div dobj=new Div();
-dobj.OP();
 }
 }
