@@ -10,18 +10,16 @@ namespace Program11
     {
         public static void Main()
         {
-            ublic static void Main()
-
-            {
+        
                 FileStream fs = new FileStream(@"C:\PGM\Employee1.txt",FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 BinaryWriter bw = new BinaryWriter(fs);
                 BinaryWriter bw1 = new BinaryWriter(fs);
                 BinaryWriter bw2 = new BinaryWriter(fs);
                 BinaryWriter bw3 = new BinaryWriter(fs);
-                bw.Write("Ferrari");
-                bw1.Write("MAX");
-                bw2.Write("23");
-                bw2.Write("Male");
+                bw.Write("Constructor Name:Red Bull Racing");
+                bw1.Write("Driver Name:Sebastian Vettel");
+                bw2.Write("Age:23");
+                bw2.Write("Gender:Male");
                 bw.Flush();
                 fs.Close();
                 FileStream fs1 = new FileStream(@"C:\PGM\Employee1.txt", FileMode.Open, FileAccess.ReadWrite);
@@ -47,10 +45,10 @@ namespace Program11
 
 
 
-}
-    }
+
+    
 
 
 
-}
-}
+
+
