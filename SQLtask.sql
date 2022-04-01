@@ -97,7 +97,7 @@ on His.BusinessEntityID =dept.DepartmentID
 go
 select * from View_name
 --Task14
-SELECT count(*)
+SESELECT count(*) No_of_rows_hr
 FROM [HumanResources].[Department],[HumanResources].[Employee],[HumanResources].[EmployeeDepartmentHistory],[HumanResources].[EmployeePayHistory],[HumanResources].[Shift]
 --Task15
 select max(rate) as MaxSalary,Name
