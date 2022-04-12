@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
@@ -53,8 +53,9 @@ namespace Dataa
             cmd.Parameters.Add("@Gender", SqlDbType.VarChar).Value = gender;
             cmd.Parameters.Add("@Country", SqlDbType.VarChar).Value = Country;
             cmd.Parameters.Add("@Age", SqlDbType.Int).Value = age;
+            Console.WriteLine("SP Inserted");
             con.Open();
-            cmd.ExecuteNonQuery();
+            
             con.Close();
         }
         public void Updatemeth(int sno, string LName)
@@ -65,6 +66,7 @@ namespace Dataa
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add("@sno", SqlDbType.Int).Value = sno;
             cmd.Parameters.Add("@LName", SqlDbType.VarChar).Value = LName;
+            Console.WriteLine("SP Updated");
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
@@ -75,6 +77,7 @@ namespace Dataa
             SqlCommand cmd = new SqlCommand("del_sp_proc", con);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add("@sno", SqlDbType.Int).Value = sno;
+            Console.WriteLine("SP deleted");
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
@@ -91,11 +94,17 @@ namespace Dataa
            // Console.WriteLine("Completed");
            // con.Close();
             task dobj = new task();
+            Console.WriteLine("Enter sno:");
             int sno = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Fname:");
             string Fname = Console.ReadLine();
+            Console.WriteLine("Enter Lname:");
             string Lname = Console.ReadLine();
+            Console.WriteLine("Enter gender:");
             string gender = Console.ReadLine();
+            Console.WriteLine("Enter Country:");
             string Country = Console.ReadLine();
+            Console.WriteLine("Enter Age:");
             int age = Convert.ToInt32(Console.ReadLine());
             dobj.insertmeth(sno, Fname, Lname, gender, Country, age);
             dobj.deletemeth(sno);
@@ -109,5 +118,3 @@ namespace Dataa
         }
     }
 }
-    
-
