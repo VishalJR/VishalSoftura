@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model AdoMVC.Models.Customer
+@{ Layout = null; }
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm("InsertRow", "Home", FormMethod.Post))
+    {
+<table>
+    <tr>
+        <th>CustomerDetails</th>
+
+    </tr>
+    <tr>
+        <td>CustomerID:</td>
+        <td>@Html.TextBoxFor(m => m.CustomerID)</td>
+    </tr>
+    <tr>
+        <td>CustomerName</td>
+        <td>@Html.TextBoxFor(m => m.CustomerName)</td>
+    </tr>
+    <tr>
+        <td>EMailID:</td>
+        <td>@Html.TextBoxFor(m => m.EmailID)</td>
+    </tr>
+    <tr>
+        <td>MobileNo:</td>
+        <td>@Html.TextBoxFor(m => m.MobileNo)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" value="Submit" /></td>
+    </tr>
+</table>            }
+</body>
+</html>
